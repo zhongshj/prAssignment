@@ -1,0 +1,11 @@
+function a = my_rep(m)
+    imgSize = 32;
+    imgPixel = [imgSize imgSize];
+    
+    rdata = im_box(m,1,0) ; %remove empty empty border columns and rows 
+    rdata = im_resize(rdata, imgPixel); % resize
+    
+    %rdata = im_features(rdata, 'all');
+    %rdata = 
+    a = prdataset(rdata);%convert to dataset
+end
