@@ -63,7 +63,8 @@ w9 = neurc;
 %[ERR8,STDS8] = prcrossval(distm(dataset),w8,10);
 %[ERR9,STDS9] = prcrossval(dataset,w9,10);
 %[ERR5,STDS5] = prcrossval(distm(dataset),w5,10);
-
+E2 = clevalf(dataset1,{w3,w5,w7,w8},[2,5,8,10,15,20,24],0.7,5);
+figure;plote(E2);axis([1 60 0 0.5])
 %w5 = knnc([],4);
 %w2 = parzenc([],0.25);
 %w10 = [w2,w3,w4,w5,w6,w7,w8]*{prodc,meanc,medianc,maxc,minc,votec};
